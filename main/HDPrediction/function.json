@@ -1,0 +1,27 @@
+{
+    "bindings": [
+      {
+        "name": "newPatientTrigger",
+        "type": "sqlTrigger",
+        "direction": "in",
+        "tableName": "dbo.HealthMetrics",
+        "connectionStringSetting": "SqlConnectionString"
+      },
+      {
+        "name": "patient",
+        "type": "sql",
+        "direction": "out",
+        "commandText": "dbo.RiskPredictions ",
+        "connectionStringSetting": "SqlConnectionString"
+      },
+      {
+        "name": "employees",
+        "type": "sql",
+        "direction": "in",
+        "commandText": "SELECT TOP 1 * FROM HealthMetrics ORDER BY timestamp DESC",
+        "commandType": "Text",
+        "connectionStringSetting": "SqlConnectionString"
+      }
+    ]
+  }
+  

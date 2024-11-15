@@ -1,0 +1,20 @@
+{
+    "bindings": [
+      {
+        "name": "newPatientAdded",
+        "type": "timerTrigger",
+        "direction": "in",
+        "schedule": "*/10 * * * * *"
+      },
+      {
+        "name": "HealthMetrics",
+        "type": "sql",
+        "direction": "out",
+        "commandText": "dbo.HealthMetrics ",
+        "connectionStringSetting": "SqlConnectionString"
+      }
+    ],
+    "scriptFile": "__init__.py",
+    "entryPoint": "main"
+  }
+  
